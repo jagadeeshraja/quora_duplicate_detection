@@ -1,0 +1,5 @@
+pandas
+numpy
+fuzzywuzzy
+keras==1.2.2
+theano==0.8.2
