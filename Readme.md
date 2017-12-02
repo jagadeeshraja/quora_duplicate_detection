@@ -1,6 +1,6 @@
 # Predicts duplicate questions in Quora using Deeplearning
 
-https://travis-ci.org/jagadeeshraja/quora_duplicate_detection.svg?branch=master
+[![Build Status](https://travis-ci.org/jagadeeshraja/quora_duplicate_detection.svg?branch=master)](https://travis-ci.org/jagadeeshraja/quora_duplicate_detection)
 
 * Use keras==1.2.2 and theano==0.8.2
 
