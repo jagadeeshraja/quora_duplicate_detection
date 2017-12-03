@@ -35,39 +35,39 @@ ytrain_enc = np_utils.to_categorical(y)
 
 question_1 = Sequential()
 question_1.add(Embedding(len(word_index) + 1,
-                         300, input_length=40, dropout=0.2))
-question_1.add(LSTM(300, dropout_W=0.2, dropout_U=0.2))
+                         100, input_length=40, dropout=0.2))
+question_1.add(LSTM(100, dropout_W=0.2, dropout_U=0.2))
 
 question_2 = Sequential()
 question_2.add(Embedding(len(word_index) + 1,
-                         300, input_length=40, dropout=0.2))
-question_2.add(LSTM(300, dropout_W=0.2, dropout_U=0.2))
+                         100, input_length=40, dropout=0.2))
+question_2.add(LSTM(100, dropout_W=0.2, dropout_U=0.2))
 
 questions_combined = Sequential()
 questions_combined.add(Merge([question_1, question_2], mode='concat'))
 questions_combined.add(BatchNormalization())
 
-questions_combined.add(Dense(300))
+questions_combined.add(Dense(100))
 questions_combined.add(PReLU())
 questions_combined.add(Dropout(0.2))
 questions_combined.add(BatchNormalization())
 
-questions_combined.add(Dense(300))
+questions_combined.add(Dense(100))
 questions_combined.add(PReLU())
 questions_combined.add(Dropout(0.2))
 questions_combined.add(BatchNormalization())
 
-questions_combined.add(Dense(300))
+questions_combined.add(Dense(100))
 questions_combined.add(PReLU())
 questions_combined.add(Dropout(0.2))
 questions_combined.add(BatchNormalization())
 
-questions_combined.add(Dense(300))
+questions_combined.add(Dense(100))
 questions_combined.add(PReLU())
 questions_combined.add(Dropout(0.2))
 questions_combined.add(BatchNormalization())
 
-questions_combined.add(Dense(300))
+questions_combined.add(Dense(100))
 questions_combined.add(PReLU())
 questions_combined.add(Dropout(0.2))
 questions_combined.add(BatchNormalization())

@@ -25,4 +25,4 @@ questions_combined = get_questions_combined(
 questions_combined.compile(loss='binary_crossentropy',
                            optimizer='adam', metrics=['accuracy'])
 
-questions_combined.predict([x1, x2])
+questions_combined.evaluate([x1, x2], y=y, batch_size=32)
